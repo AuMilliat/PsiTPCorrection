@@ -33,3 +33,21 @@
 /.vs/ProjectEvaluation
 /.vs
 /packages
+/Samples/AzureKinectSample/bin/x64/Debug
+/Samples/AzureKinectSample/obj
+/Samples/AzureKinectSample - Copie/obj/Debug/net472
+/Samples/HelloWorld_Part1/obj
+/Samples/AzureKinectSample - Copie/obj
+/Samples/HelloWorld_Part1C/obj
+/Samples/HelloWorld_Part2/obj
+/Samples/HelloWorld_Part2C/obj
+/Samples/PSIUnity/bin/Debug/netcoreapp3.1
+/Samples/PSIUnity/obj
+/Samples/WebcamAndKinect/bin
+/Samples/WebcamAndKinect/obj
+/Samples/WebcamAndStore/bin
+/Samples/WebcamAndStore/obj
+/Samples/WebcamWithAudioSample/bin/Debug/net472
+/Samples/WebcamWithAudioSample/obj
+/Samples/WebRTC/bin
+/Samples/WebRTC/obj
