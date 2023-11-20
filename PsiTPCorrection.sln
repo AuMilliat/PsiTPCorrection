@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRTC", "Samples\WebRTC\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureKinectSample", "Samples\AzureKinectSample\AzureKinectSample.csproj", "{2BF4631D-8E01-4658-8DE4-A95165CC3685}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureKinectPostures", "Samples\AzureKinectPostures\AzureKinectPostures.csproj", "{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +124,14 @@ Global
 		{2BF4631D-8E01-4658-8DE4-A95165CC3685}.Release|Any CPU.Build.0 = Release|x64
 		{2BF4631D-8E01-4658-8DE4-A95165CC3685}.Release|x64.ActiveCfg = Release|x64
 		{2BF4631D-8E01-4658-8DE4-A95165CC3685}.Release|x64.Build.0 = Release|x64
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Debug|x64.ActiveCfg = Debug|x64
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Debug|x64.Build.0 = Debug|x64
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Release|x64.ActiveCfg = Release|x64
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +146,7 @@ Global
 		{C61A4264-096A-489E-8597-CA29C90429F8} = {1AA38339-B349-4AA7-A0A9-F92ADCFDB2DF}
 		{C42AB653-EC76-4D02-B524-629756CDE2E3} = {1AA38339-B349-4AA7-A0A9-F92ADCFDB2DF}
 		{2BF4631D-8E01-4658-8DE4-A95165CC3685} = {1AA38339-B349-4AA7-A0A9-F92ADCFDB2DF}
+		{CB68B33A-1D7D-48BF-A06B-5A50C106F4A2} = {1AA38339-B349-4AA7-A0A9-F92ADCFDB2DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAF15EE9-DCC5-411B-A9E5-7C2F3D132331}

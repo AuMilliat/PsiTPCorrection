@@ -69,7 +69,6 @@ namespace AzureKinectSample
                 store.Write(azureKinect.DepthImage, "Depth");
                 store.Write(azureKinect.Bodies, "Bodies");
 
-
                 // consuming color, depth, IMU, body tracking, calibration
                 azureKinect.ColorImage.Resize(widthOutput, heightOutput)
                     .Join(azureKinect.DepthImage)
