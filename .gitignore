@@ -51,3 +51,13 @@
 /Samples/WebcamWithAudioSample/obj
 /Samples/WebRTC/bin
 /Samples/WebRTC/obj
+/Samples/AzureKinectPostures/bin/x64/Debug/net8.0
+/Samples/AzureKinectPostures/obj/Debug/net8.0
+/Samples/AzureKinectPostures/obj/x64/Debug/net8.0
+/Samples/AzureKinectPostures/obj/AzureKinectPostures.csproj.nuget.dgspec.json
+/Samples/AzureKinectPostures/obj/Release/net8.0
+/Samples/HelloWorld_Part1/bin/Debug/netcoreapp3.1
+/Samples/HelloWorld_Part1C/bin/Debug/netcoreapp3.1
+/Samples/HelloWorld_Part2C/bin/Debug/netcoreapp3.1
+/Samples/HelloWorld_Part2/bin/Debug/netcoreapp3.1
+/Samples/AzureKinectPostures/obj
