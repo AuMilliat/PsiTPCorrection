@@ -6,9 +6,10 @@ namespace HelloWorld
     using System;
     using System.ComponentModel;
     using System.Diagnostics;
+    using System.Numerics;
     using KeyboardReader;
     using Microsoft.Psi;
-    using Microsoft.Psi.Components;
+    using Microsoft.Psi.Interop.Rendezvous;
     using Microsoft.Psi.Remoting;
 
     /// <summary>
@@ -24,20 +25,61 @@ namespace HelloWorld
             // Create a pipeline
             var p = Pipeline.Create();
 
-            RemoteImporter importer = new RemoteImporter(p, "localhost");
-            RemoteExporter exporter = new RemoteExporter(p, 11412, TransportKind.Tcp);
-            KeyboardReader reader = new KeyboardReader(p);
+            string host = "127.0.0.1";
+            var server = new RendezvousServer();
+            var process = new Rendezvous.Process("Console");
 
-            if (!importer.Connected.WaitOne(-1))
+            RemoteClockExporter exporter = new RemoteClockExporter(11511);
+            process.AddEndpoint(exporter.ToRendezvousEndpoint(host));
+
+            RemoteExporter remoteExporter = new RemoteExporter(p, 11412, TransportKind.Tcp);
+            var timer = Timers.Timer(p, TimeSpan.FromSeconds(5));
+            remoteExporter.Exporter.Write(timer.Out, "PingInter");
+            process.AddEndpoint(remoteExporter.ToRendezvousEndpoint(host));
+
+            server.Rendezvous.ProcessAdded += (_, process) =>
             {
-                throw new Exception("could not connect to server");
-            }
+                Console.WriteLine($"Process added: {process.Name}");
+                if (process.Name.Contains("Console"))
+                    return;
+                Subpipeline subP = new Subpipeline(p, process.Name);
+                var clone = process.Endpoints.DeepClone();
+                foreach (var endpoint in clone)
+                {
+                    if (endpoint is Rendezvous.RemoteExporterEndpoint remoteEndpoint)
+                    {
+                        RemoteImporter remoteImporter = remoteEndpoint.ToRemoteImporter(subP);
+                        if (remoteImporter.Connected.WaitOne() == false)
+                            continue;
+                        foreach (Rendezvous.Stream stream in remoteEndpoint.Streams)
+                        {
+                            Console.WriteLine($"Stream : {stream.StreamName}");
+                            if (stream.StreamName is "PlayerPosition")
+                            {
+                                remoteImporter.Connected.WaitOne();
+                                var pos = remoteImporter.Importer.OpenStream<Vector3>("PlayerPosition");
+                                pos.Do((vec, env) => { Console.WriteLine("posImp : " + vec.ToString()); });
+                            }
+                            if (stream.StreamName is "Spawn")
+                            {
+                                remoteImporter.Connected.WaitOne();
+                                var ids = remoteImporter.Importer.OpenStream<long>("Spawn");
+                                ids.Do((id, env) => { Console.WriteLine("Spawn : " + id.ToString()); });
+                            }
+                        }
+                    }
+                }
+                subP.RunAsync();
+            };
 
-            exporter.Exporter.Write(reader.Out, "Topic");
-            importer.Importer.OpenStream<System.Numerics.Vector3>("Position").Do((System.Numerics.Vector3 data, Envelope envelope) => { Console.WriteLine($"{envelope.OriginatingTime} : {data}"); });
+            var res = server.Rendezvous.TryAddProcess(process);
+            server.Start();
 
-            // Run the pipeline, but don't block here
-            p.RunAsync();
+            // Waiting for an out key
+            Console.WriteLine("Press any key to stop the application.");
+            Console.ReadLine();
+            // Stop correctly the pipeline.
+            p.Dispose();
         }
     }
 }

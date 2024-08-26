@@ -13,7 +13,7 @@ namespace WebcamAndStore
 
             WebRTCVideoStreamConfiguration config = new WebRTCVideoStreamConfiguration();
             config.WebsocketAddress = System.Net.IPAddress.Loopback;
-            config.WebsocketPort = 8888;
+            config.WebsocketPort = 11585;
             WebRTCVideoStream stream = new WebRTCVideoStream(pipeline, config);
             var store = PsiStore.Create(pipeline, "WebRTC", "D:\\Stores");
 
@@ -22,7 +22,7 @@ namespace WebcamAndStore
             // Start the pipeline running
             pipeline.RunAsync();
 
-            // Wainting for an out key
+            // Waiting for an out key
             Console.WriteLine("Press any key to stop the application.");
             Console.ReadLine();
             // Stop correctly the pipeline.

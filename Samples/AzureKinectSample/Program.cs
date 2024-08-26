@@ -14,9 +14,6 @@ namespace AzureKinectSample
     using Microsoft.Psi.AzureKinect;
     using Microsoft.Psi.Calibration;
     using Microsoft.Psi.Imaging;
-    using RemoteConnectors;
-    using Microsoft.Psi.Audio;
-    using Microsoft.Psi.Media;
 
     /// <summary>
     /// Azure Kinect sample program.
@@ -29,6 +26,7 @@ namespace AzureKinectSample
         public static void Main()
         {
             // camera resolution settings
+            const ColorResolution resolution = ColorResolution.R720p;
             const int widthSource = 1280;
             const int heightSource = 720;
 
@@ -45,16 +43,39 @@ namespace AzureKinectSample
 
             using (var pipeline = Pipeline.Create("AzureKinectSample", DeliveryPolicy.LatestMessage))
             {
-                KinectAzureRemoteConnectorConfiguration kinectAzureRemoteConnectorConfiguration = new KinectAzureRemoteConnectorConfiguration();
-                kinectAzureRemoteConnectorConfiguration.Address = "localhost";
-                kinectAzureRemoteConnectorConfiguration.StartPort = 22822;
-                kinectAzureRemoteConnectorConfiguration.ActiveStreamNumber = 5;
-                KinectAzureRemoteConnector kinectAzureRemoteConnector = new KinectAzureRemoteConnector(pipeline, kinectAzureRemoteConnectorConfiguration);
+                var azureKinect = new AzureKinectSensor(
+                    pipeline,
+                    new AzureKinectSensorConfiguration()
+                    {
+                        OutputImu = true,
+                        ColorResolution = resolution,
+                        DepthMode = DepthMode.WFOV_Unbinned,
+                        CameraFPS = FPS.FPS15,
+                        BodyTrackerConfiguration = new AzureKinectBodyTrackerConfiguration()
+                        {
+                            CpuOnlyMode = true, // false if CUDA supported GPU available
+                            SensorOrientation = initialOrientation,
+                        },
+                    });
 
                 StringBuilder sb = new StringBuilder();
                 SensorOrientation lastOrientation = (SensorOrientation)(-1); // detect orientation changes
 
-                kinectAzureRemoteConnector.OutColorImage.Decode(new ImageFromBitmapStreamDecoder()).Join(kinectAzureRemoteConnector.OutDepthImage.Decode()).Join(kinectAzureRemoteConnector.OutIMU, TimeSpan.FromMilliseconds(10)).Pair(kinectAzureRemoteConnector.OutBodies).Pair(kinectAzureRemoteConnector.OutDepthDeviceCalibrationInfo).Do(message =>
+                // Create the store component
+                var store = PsiStore.Create(pipeline, "Azure", "D:\\Stores");
+
+                // Write incoming data in the store
+                store.Write(azureKinect.ColorImage, "Color");
+                store.Write(azureKinect.DepthImage, "Depth");
+                store.Write(azureKinect.Bodies, "Bodies");
+
+                // consuming color, depth, IMU, body tracking, calibration
+                azureKinect.ColorImage.Resize(widthOutput, heightOutput)
+                    .Join(azureKinect.DepthImage)
+                    .Join(azureKinect.Imu, TimeSpan.FromMilliseconds(10))
+                    .Pair(azureKinect.Bodies)
+                    .Pair(azureKinect.DepthDeviceCalibrationInfo)
+                    .Do(message =>
                 {
                     var (color, depth, imu, bodies, calib) = message;
 
@@ -142,22 +163,6 @@ namespace AzureKinectSample
                         Console.BackgroundColor = ConsoleColor.Black;
                     }
                 });
-                // Create the webcam component
-                var webcam = new MediaCapture(pipeline, 640, 480, 30, true);
-
-                // Create the store component
-                var store = PsiStore.Create(pipeline, "AzureKinectSample", "D:\\Stores");
-
-                // Write incoming images in the store at 'Image' track
-                store.Write(webcam.Out, "Image");
-                // Write incoming audio in the store at 'Audio' track
-                store.Write(webcam.Out, "Audio");
-                // Write incoming images in the store at 'KinectImage' track
-                store.Write(kinectAzureRemoteConnector.OutColorImage, "KinectImage");
-                // Write incoming bodies in the store at 'KinectBodies' track
-                store.Write(kinectAzureRemoteConnector.OutBodies, "KinectBodies");
-                // Write incoming bodies in the store at 'KinectDepth' track
-                store.Write(kinectAzureRemoteConnector.OutDepthImage, "KinectDepth");
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;

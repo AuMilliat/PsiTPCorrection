@@ -21,6 +21,7 @@ namespace WebcamAndStore
 
             // Write incoming images in the store at 'Image' track
             store.Write(webcam.Out, "Image");
+            store.Write(webcam.Audio, "Audio");
 
             // Start the pipeline running
             pipeline.RunAsync();
