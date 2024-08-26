@@ -35,31 +35,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Psi, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Runtime.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Runtime.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Psi.Audio, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Audio.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Audio.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Psi.Audio.Windows, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Audio.Windows.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.Windows.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Audio.Windows.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.Windows.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Psi.Data, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Data.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Data.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Data.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Psi.IL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Runtime.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.IL.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Runtime.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.IL.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Psi.Imaging, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Imaging.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Imaging.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Imaging.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Imaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Media, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Media.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Media.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Psi.Media.Windows.x64, Version=0.18.72.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.18.72.1-beta\lib\net472\Microsoft.Psi.Media.Windows.x64.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Media.Windows.x64.0.19.100.1-beta\lib\net472\Microsoft.Psi.Media.Windows.x64.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Psi.Media_Interop.Windows.x64, Version=0.18.72.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.18.72.1-beta\lib\net472\Microsoft.Psi.Media_Interop.Windows.x64.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Media.Windows.x64.0.19.100.1-beta\lib\net472\Microsoft.Psi.Media_Interop.Windows.x64.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
@@ -79,25 +89,30 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\..\packages\System.Collections.Immutable.9.0.0-preview.7.24405.7\lib\net462\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Common.4.7.2\lib\net461\System.Drawing.Common.dll</HintPath>
+      <HintPath>..\..\packages\System.Drawing.Common.9.0.0-preview.7.24405.4\lib\net462\System.Drawing.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <HintPath>..\..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.7.0.0-preview.2.22152.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />

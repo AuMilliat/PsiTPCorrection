@@ -55,50 +55,59 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.10.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Portable.BouncyCastle.1.8.10\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="DirectShowLib, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DirectShowLib.Standard.2.1.0\lib\net45\DirectShowLib.dll</HintPath>
     </Reference>
-    <Reference Include="DnsClient, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\DnsClient.1.6.1\lib\net471\DnsClient.dll</HintPath>
+    <Reference Include="DnsClient, Version=1.8.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DnsClient.1.8.0\lib\net472\DnsClient.dll</HintPath>
     </Reference>
-    <Reference Include="FFmpeg.AutoGen, Version=5.1.1.0, Culture=neutral, PublicKeyToken=9b7632533a381715, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FFmpeg.AutoGen.5.1.1\lib\net472\FFmpeg.AutoGen.dll</HintPath>
+    <Reference Include="FFmpeg.AutoGen, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FFmpeg.AutoGen.7.0.0\lib\netstandard2.0\FFmpeg.AutoGen.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0-preview.7.24405.7\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Runtime.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.9.0.0-preview.7.24405.7\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Audio, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Audio.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.9.0.0-preview.7.24405.7\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Audio.Windows, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Audio.Windows.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.Windows.dll</HintPath>
+    <Reference Include="Microsoft.Psi, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Runtime.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Data, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Data.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Data.dll</HintPath>
+    <Reference Include="Microsoft.Psi.Audio, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Audio.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Audio.Windows, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Audio.Windows.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Audio.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Data, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Data.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Data.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Psi.IL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Runtime.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.IL.dll</HintPath>
+      <HintPath>..\..\packages\Microsoft.Psi.Runtime.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.IL.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Imaging, Version=0.18.72.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Psi.Imaging.0.18.72.1-beta\lib\netstandard2.0\Microsoft.Psi.Imaging.dll</HintPath>
+    <Reference Include="Microsoft.Psi.Imaging, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Imaging.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Imaging.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Media.Windows.x64, Version=0.18.72.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.18.72.1-beta\lib\net472\Microsoft.Psi.Media.Windows.x64.dll</HintPath>
+    <Reference Include="Microsoft.Psi.Media, Version=0.19.100.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Psi.Media.0.19.100.1-beta\lib\netstandard2.0\Microsoft.Psi.Media.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Psi.Media_Interop.Windows.x64, Version=0.18.72.1, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.18.72.1-beta\lib\net472\Microsoft.Psi.Media_Interop.Windows.x64.dll</HintPath>
+    <Reference Include="Microsoft.Psi.Media.Windows.x64, Version=0.19.100.1, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\Microsoft.Psi.Media.Windows.x64.0.19.100.1-beta\lib\net472\Microsoft.Psi.Media.Windows.x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Media_Interop.Windows.x64, Version=0.19.100.1, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\Microsoft.Psi.Media.Windows.x64.0.19.100.1-beta\lib\net472\Microsoft.Psi.Media_Interop.Windows.x64.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.13.0.3-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
@@ -116,30 +125,33 @@
     <Reference Include="SharpDX.MediaFoundation, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpDX.MediaFoundation.4.2.0\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
     </Reference>
-    <Reference Include="SIPSorcery, Version=6.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SIPSorcery.6.0.11\lib\net461\SIPSorcery.dll</HintPath>
+    <Reference Include="SIPSorcery, Version=6.2.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SIPSorcery.6.2.4\lib\net461\SIPSorcery.dll</HintPath>
     </Reference>
-    <Reference Include="SIPSorceryMedia.Abstractions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SIPSorceryMedia.Abstractions.1.2.0\lib\netstandard2.0\SIPSorceryMedia.Abstractions.dll</HintPath>
+    <Reference Include="SIPSorceryMedia.Abstractions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SIPSorceryMedia.Abstractions.1.2.1\lib\netstandard2.0\SIPSorceryMedia.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="SIPSorceryMedia.Encoders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SIPSorceryMedia.Encoders.0.0.10-pre\lib\net461\SIPSorceryMedia.Encoders.dll</HintPath>
+      <HintPath>..\..\packages\SIPSorceryMedia.Encoders.0.0.13\lib\net461\SIPSorceryMedia.Encoders.dll</HintPath>
     </Reference>
-    <Reference Include="SIPSorceryMedia.FFmpeg, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SIPSorceryMedia.FFmpeg.1.2.1\lib\netstandard2.0\SIPSorceryMedia.FFmpeg.dll</HintPath>
+    <Reference Include="SIPSorceryMedia.FFmpeg, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SIPSorceryMedia.FFmpeg.1.4.1\lib\netstandard2.0\SIPSorceryMedia.FFmpeg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    <Reference Include="System.Collections.Immutable, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.9.0.0-preview.7.24405.7\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.9.0.0-preview.7.24405.7\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Drawing.Common.9.0.0-preview.7.24405.4\lib\net462\System.Drawing.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -163,8 +175,8 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
@@ -176,11 +188,11 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>..\..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
@@ -194,13 +206,16 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -225,11 +240,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\SIPSorceryMedia.Encoders.0.0.10-pre\build\SIPSorceryMedia.Encoders.targets" Condition="Exists('..\..\packages\SIPSorceryMedia.Encoders.0.0.10-pre\build\SIPSorceryMedia.Encoders.targets')" />
+  <Import Project="..\..\packages\SIPSorceryMedia.Encoders.0.0.13\build\SIPSorceryMedia.Encoders.targets" Condition="Exists('..\..\packages\SIPSorceryMedia.Encoders.0.0.13\build\SIPSorceryMedia.Encoders.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\SIPSorceryMedia.Encoders.0.0.10-pre\build\SIPSorceryMedia.Encoders.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SIPSorceryMedia.Encoders.0.0.10-pre\build\SIPSorceryMedia.Encoders.targets'))" />
+    <Error Condition="!Exists('..\..\packages\SIPSorceryMedia.Encoders.0.0.13\build\SIPSorceryMedia.Encoders.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SIPSorceryMedia.Encoders.0.0.13\build\SIPSorceryMedia.Encoders.targets'))" />
   </Target>
 </Project>
